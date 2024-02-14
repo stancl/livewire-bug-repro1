@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Bar;
+use App\Livewire\Foo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Foo::class)->name('foo');
+Route::get('/bar', Bar::class)->name('bar');
